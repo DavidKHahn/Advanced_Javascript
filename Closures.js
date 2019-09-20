@@ -22,7 +22,7 @@ const booStringName = booString()
 
 // CLOSURES
 
-Memory efficient
+// Memory efficient
 function heavyDuty(index) {
     const bigArray = new Array(7000).fill('Hello')
     console.log('created!')
