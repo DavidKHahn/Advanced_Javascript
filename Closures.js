@@ -1,5 +1,40 @@
-// CLOSURES: functions + lexical scope
+// Closures and Prototypical Inheritance
+const four = new Function('return 4')
+// // functions are objects (discuss 'new' in object oriented programming ch)
+// // functions can be passed around like data
 
+console.log(four());
+
+// functions are First Class Citizens in JAVASCRIPT (functions are data)
+
+// 1 -> able to assign function as variables
+var stuff = function() {}
+
+// // 2 -> pass functions into arguments
+function a(fn) {
+    fn()
+}
+
+a(function () {
+    console.log('hi there')
+})
+// // 3 -> able to return functions as values from other functions
+function b() {
+    return function c() {console.log('bye')}
+}
+
+var d = b()
+d()
+
+// default param
+function a (param = 6) {
+    return param
+}
+
+console.log(a())
+
+
+// CLOSURES: functions + lexical scope
 function a() {
     let grandpa = 'grandpa'
     return function b() {
