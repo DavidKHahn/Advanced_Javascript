@@ -18,10 +18,18 @@ for (let i = 0; i<1000; i++){
 // declarative
 [1,2,3].forEach(item => console.log(item))
 
-// Immutability
+// Immutability: keeps functions pure and does not mutate original data
 const obj = {name: 'David'}
+
 function clone(obj) {
     return {...obj}; // this is pure
 }
 
-obj.name = 'Nana'
+function updateName(obj) {
+    const obj2 = clone(obj);
+    obj2.name = 'Dragon'
+    return obj2
+}
+
+const newName = updateName(obj)
+console.log(obj, newName)
