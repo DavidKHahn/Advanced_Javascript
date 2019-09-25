@@ -13,3 +13,6 @@ const pipe = (f, g) => (data) => g(f(data));
 fn1(fn2(fn3(50)));
 compose(fn1, fn2, fn3)(50)
 pipe(fn3, fn2, fn1)(50)
+
+// Arity: number of arguments a function takes
+// In functional programming, the fewer number of params it is easier to use the fn (i.e.: currying, compose, pipe)
