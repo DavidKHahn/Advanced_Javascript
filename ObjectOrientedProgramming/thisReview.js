@@ -23,7 +23,7 @@ const person3 = {
     hi: function() {
         console.log('hi ' + this.setTimeout)
     }
-    // .bind(window) -> used in browser console which returns setTimeout() { [native code] }
+    // .bind(window) -> used in browser console which returns 'setTimeout() { [native code] }'
 }
 person3.hi()
 

@@ -106,4 +106,18 @@ console.log(Object.values(obj)); // ['bar', 42]
 var obj = { foo: 'bar', baz: 42} ;
 console.log(Object.entries(obj)); // [ [ 'foo', 'bar' ], [ 'baz', 42] ]
 
+// n kids are sitting in a circle
+// k toys available to distribute
+// i position to start from
 
+// 3, 5, 1 => 2
+
+const getLK = (n , k, i) => {
+    if( k > n) {
+        return i + (k%n) - 1;
+    } else {
+        return i+n -1;
+    }
+}
+
+console.log('Solution: ', getLK(3, 5, 1))
