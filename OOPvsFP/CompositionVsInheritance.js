@@ -3,6 +3,15 @@
 
 // Fragile Base Class Problem -> changes all subclasses
 // Hierarchy
+
+
+/*
+few operations on common data
+stateful
+side effect
+imperative
+*/
+
 class Character {
     constructor(name, weapon) {
         this.name = name;
@@ -37,8 +46,16 @@ class Ogre extends Character {
 const elf1 = new Elf('Shrek', 'club')
 const houseElf = new Elf('Dolby', 'cloth', 'house')
 houseElf.makeFort()
+
 // Composition is smaller pieces to create something bigger (i.e. compose)
 // what it has
+
+/*
+many operations on fixed data
+stateless
+pure
+declarative
+*/
 
 function getAttack(character) {
     return Object.assign({}, character, {attackFn: () => {}})
