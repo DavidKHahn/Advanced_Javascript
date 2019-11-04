@@ -37,3 +37,23 @@ console.log(fiona.attack())
 
 const shrek = new Ogre('Shrek', 'club', 'green')
 console.log(shrek.makeFort())
+
+console.log(Ogre.prototype.isPrototypeOf(shrek))
+// checks to see if shrek belongs to Ogre -> true
+console.log(Character.prototype.isPrototypeOf(Ogre))
+// false
+console.log(Character.prototype.isPrototypeOf(Ogre.prototype))
+// true
+
+console.log(fiona instanceof Elf)
+// true
+console.log(fiona instanceof Character)
+// true
+console.log(fiona instanceof Ogre)
+// false
+
+/*
+    - Extends links up the prototype chain (prototypal inheritance).
+    - Unlike Java, Javascript references the classes and not copies so there is a bit of memory efficiency.
+    - '_' (underscore) references a private method (Java has this method built-in, JS can use weakmaps but newer proposal is in the works as part of ECMAScript)
+*/
