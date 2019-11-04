@@ -1,22 +1,28 @@
 // Object Oriented Programming Review
-// Constructor Functions
+
+// Constructor Functions: Useful when invoked with 'New' which would enable use of prototype
 function Elf(name, weapon) {
 // 'this' points to new objects created when constructor functions are called with 'new'
     this.name = name;
     this.weapon = weapon;
 }
-// creates attack function onto 'Elf' using prototype (constructor)
+// creates attack function onto 'Elf' using prototype (constructor), written in same memory space saving new objects from repeatedly calling again
+// using a arrow fn in this case would lexically scope the value of 'this' returning 'undefined' so in this case fn expression would work instead
 Elf.prototype.attack = function(){
     return 'attack with ' + this.weapon
 }
+
 // 'bind' this is necessary since the 'this' binds to the window object (prototype)
+
 // Elf.prototype.build = function(){
 //     function building() {
 //         return this.name + ' builds a house';
 //     }
 //     return building.bind(this)
 // }
+
 // case #2
+
 // Elf.prototype.build = function(){
 //     // lexically create 'this' inside the function to create reference
 //     let self = this;
