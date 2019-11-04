@@ -49,10 +49,3 @@ console.log(shrek.makeFort())
 console.log(dolby instanceof Elf) // simpler syntax use for checking prototypes
 console.log(dolby instanceof Character)
 // at the end of the day with Javascript we have objects inheriting from other objects
-
-// FOUR PILLARS OF OBJECT ORIENTED PROGRAMMING:
-
-// POLYMORPHISM - customizing methods within each class
-// INHERITANCE - avoid having to rewrite code, saves memory space (shared memory space, inheriting from other classes)
-// ABSTRACTION - hides complexity from user (i.e. creating simpler interfaces, here are methods & properties but works under the hood)
-// ENCAPSULATION - organizes into units (i.e. wrapping code into boxes, easier to maintain and reuse)
